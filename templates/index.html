@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Queue Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Real-Time Task Queue Dashboard</h1>
+            <div class="connection-status">
+                <span id="connection-indicator" class="indicator disconnected"></span>
+                <span id="connection-text">Connecting...</span>
+            </div>
+        </header>
+
+        <!-- Statistics Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Total Tasks</div>
+                <div class="stat-value" id="stat-total">0</div>
+            </div>
+            <div class="stat-card pending">
+                <div class="stat-label">Pending</div>
+                <div class="stat-value" id="stat-pending">0</div>
+            </div>
+            <div class="stat-card processing">
+                <div class="stat-label">Processing</div>
+                <div class="stat-value" id="stat-processing">0</div>
+            </div>
+            <div class="stat-card completed">
+                <div class="stat-label">Completed</div>
+                <div class="stat-value" id="stat-completed">0</div>
+            </div>
+            <div class="stat-card failed">
+                <div class="stat-label">Failed</div>
+                <div class="stat-value" id="stat-failed">0</div>
+            </div>
+            <div class="stat-card retrying">
+                <div class="stat-label">Retrying</div>
+                <div class="stat-value" id="stat-retrying">0</div>
+            </div>
+        </div>
+
+        <!-- Create Task Form -->
+        <div class="create-task-section">
+            <h2>Create New Task</h2>
+            <form id="create-task-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="task-name">Task Name</label>
+                        <input type="text" id="task-name" name="name" required placeholder="Enter task name">
+                    </div>
+                    <div class="form-group">
+                        <label for="task-type">Task Type</label>
+                        <select id="task-type" name="task_type" required>
+                            <option value="email">Email</option>
+                            <option value="data_processing">Data Processing</option>
+                            <option value="file_conversion">File Conversion</option>
+                            <option value="api_call">API Call</option>
+                            <option value="report_generation">Report Generation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-priority">Priority (1-10)</label>
+                        <input type="number" id="task-priority" name="priority" min="1" max="10" value="5" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="task-payload">Payload (JSON)</label>
+                    <textarea id="task-payload" name="payload" rows="3" placeholder='{"key": "value"}'>{}</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Task</button>
+            </form>
+        </div>
+
+        <!-- Tasks List -->
+        <div class="tasks-section">
+            <div class="section-header">
+                <h2>Tasks</h2>
+                <button id="refresh-btn" class="btn btn-secondary">Refresh</button>
+            </div>
+            <div id="tasks-list" class="tasks-list">
+                <!-- Tasks will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
+
