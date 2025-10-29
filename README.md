@@ -8,11 +8,13 @@ A production-ready, scalable task queue system built with FastAPI, Redis, and We
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Screenshots
+<img width="1701" height="939" alt="dashboard-full" src="https://github.com/user-attachments/assets/db2d106f-78b2-41f6-bb15-35d92f947d50" />
 
-![Dashboard](screenshots/dashboard-full.png)
+
 *Real-time task queue dashboard with live statistics and progress tracking*
 
-![Task Details](screenshots/tasks-detail.png)
+<img width="1468" height="781" alt="tasks-detail" src="https://github.com/user-attachments/assets/9e74b7df-6c24-4d1d-af00-f65751cd7a15" />
+
 *Individual task progress with real-time updates*
 
 ## Features
