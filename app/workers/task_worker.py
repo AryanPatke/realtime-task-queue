@@ -91,7 +91,7 @@ class TaskWorker:
         steps = 10
         
         for i in range(steps):
-            # Simulate work
+            # Simulating work here, we can add a real task execution here
             await asyncio.sleep(random.uniform(0.5, 2.0))
             
             # Update progress
