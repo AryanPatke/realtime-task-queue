@@ -36,7 +36,7 @@ A production-ready, scalable task queue system built with FastAPI, Redis, and We
 
 1. Clone the repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/AryanPatke/realtime-task-queue.git
 cd realtime-task-queue
 ```
 
