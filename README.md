@@ -59,7 +59,7 @@ docker-compose up --build
 
 1. Clone and navigate to the project
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/AryanPatke/realtime-task-queue.git
 cd realtime-task-queue
 ```
 
